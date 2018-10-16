@@ -1,0 +1,30 @@
+
+<div class="login_form">
+<h2>Register</h2>
+<form [formGroup]="registerForm" autocomplete="off" (ngSubmit)="register()">
+     <div class="form-group">
+      <label for="name">Name</label>
+      <input 
+     
+      id="name" 
+      type="text" 
+      class="form-control"  formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input 
+      id="username" 
+      type="text" 
+      class="form-control"  formControlName="username"> 
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input    
+      id="password" 
+      type="text" 
+      class="form-control"
+      name="password" formControlName="password">
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!registerForm.valid">Login</button>
+</form>
+</div>

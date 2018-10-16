@@ -1,0 +1,34 @@
+.movie_details{
+  display: flex;
+}
+
+.movie_details div{
+  margin:0px 5px 0px 5px;
+  border-radius: 5px;
+  padding:10px;
+  background-color:white;
+}
+.theatreList{
+  border-radius: 5px;
+  border:1px solid gray;
+  background-color: white;
+  margin:10px;
+  padding:10px;
+}
+.timesList{
+  display: flex;
+  background-color: white;
+  margin:10px;
+  padding:10px;
+}
+.showTimes{
+  border-radius: 5px;
+  border:1px solid gray;
+  background-color: white;
+  margin:10px;
+  padding:10px;
+}
+label{
+  font-size:20px;
+  color:black;
+}

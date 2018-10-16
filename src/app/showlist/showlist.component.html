@@ -1,0 +1,24 @@
+<div class="Movie_Detaisl pull-left">
+  <div class="form-group ">
+    <label for="moviename" >Select Movie Name </label>
+    <select class="form-control" name="selectedMovieName" [(ngModel)]="selectedMovieName" (change)="selectedMovie($event.target.value)">
+      <option value="null" selected>Select Movie Name</option>
+      <option *ngFor="let data of Showlist | uniqueFilter:'movieName'" [value]='data.movieName'>
+        {{data.movieName}}</option>      
+    </select>
+  </div>
+  <div class="movie_details">
+    <div *ngIf="selectedShowTheatre.length!=0 || showTimings.length!=0">
+      <div *ngFor="let theatre of selectedShowTheatre">
+        <div *ngFor="let timings of showTimings" class="timesList" >
+        <div class="theatreList">
+          {{theatre}} 
+        </div>
+        <div *ngFor="let time of timings"  (click)="selectedShowTiming(time,theatre)" class="showTimes">
+        {{time}} 
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>

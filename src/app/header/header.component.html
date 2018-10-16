@@ -1,0 +1,26 @@
+
+<div class="row topHeader">
+  <nav class="navbar ">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h1 routerLink='/'>Book<span class="hclstyle">HCL</span>Show</h1>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLink="/register" *ngIf="!userService.LoggedIn()"><span class="glyphicon glyphicon-user"></span> Sign Up</li>
+        <li routerLink="/login" *ngIf="!userService.LoggedIn()"><span class=" glyphicon glyphicon-log-in"></span> Login</li>
+        <li *ngIf="userService.LoggedIn()" class="welcome_note">
+          <div class="dropdown">
+            <div class=" btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Welcome {{userLoginDetatils.name}}
+            <span class="caret"></span></div>
+            <ul class="dropdown-menu welcome_child_data">
+              <li  routerLink="/Profile">My Profile</li>
+              <li>My Book History</li>
+              <li class="btn btn-primary" *ngIf="userService.LoggedIn()" (click)="userService.userLogout()"><span class=" glyphicon glyphicon-log-out"></span>Logout</li>
+            </ul>
+          </div>
+          </li>
+         
+      </ul>
+    </div>
+  </nav>
+</div>
